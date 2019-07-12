@@ -56,7 +56,6 @@ def add_new_sheet(data, name):
     index = get_index('trip_days')
     worksheet.write_number(n + 1, index, sum(i['trip_days'] for i in data), TOTAL_FORMAT)
     formula = "=SUM({0}1:{0}{1})".format(chr(65 + index), n + 1)
-    print(formula)
     worksheet.write_formula(n + 1, index, formula, TOTAL_FORMAT)
 
 
@@ -334,7 +333,7 @@ if __name__ == '__main__':
     final_file_name = os.path.join(directory, file_name + '.xlsx')
     workbook = xlsxwriter.Workbook(final_file_name)
 
-    if True:
+    if False:
         print(username)
         print(directory)
         print(billing_type)

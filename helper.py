@@ -113,7 +113,6 @@ def get_trips(options):
                 elif 'client' in x.keys():
                     temp['client_client'] = x['client']
                 res.append(temp)
-            print("[]]]]]]")
             print(len(res))
             return res
         else:
@@ -125,7 +124,6 @@ def get_trips(options):
                 elif 'client' in x.keys():
                     temp['client_client'] = x['client']
                 res.append(temp)
-            print("[]]]]]]")
             print(len(res))
             return res
 
@@ -143,7 +141,7 @@ def get_pings(trips_list, startTime, endTime):
     }, {
         '$group': { '_id': '$tripId', 'pings': { '$push': '$$ROOT' } }
     }], allowDiskUse=True)
-    print("pingsssss")
+    print("pings returned")
     res = list()
     for x in data:
         res.append(x)
