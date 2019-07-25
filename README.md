@@ -1,14 +1,17 @@
 # BillingModule
 
-## Input    
-    python3 main.py <Start DDMMYY> <End DDMMYY> <FileName> <TRIP|TRIPDAYS> <user> <client>
+## Input Params
+
+|short Param|Long Param|Help|
+|---|---|---|
+|`-s`| `--start`|`Start date of generating the report in (DD/MM/YYYY)`|
+|`-e`| `--end`|`End date of generating the report in DD/MM/YYYY`|
+|`-t`| `--type`|`Billing type TRIPDAYS / TRIPPINGS`|
+|`-o`| `--output`|`Output File Name`|
+|`-u`| `--username`|`User Name`|
+|`-c`| `--client`|`Client Name`|
+|`-d`| `--dir`|`Output Directory`|
+|`-q`| `--query`|`Query`|
 
 ### Example Input
-    python3 main.py 1 1 2019 1 2 2019 data TRIPDAYS lplogics
-    python3 main.py 1 1 2019 1 3 2019 data TRIPDAYS mahindra mahindra_tractor_outbound
-    
-#### For credentials create a new file with name 'private' and add the server string to that
-   Example server
-      
-      mongodb+srv://username:password@example.mongodb.net:port
-     
+    python3 main.py -d=1/1/2019 -e=1/2/2019 -o=data -t="TRIPDAYS" -u="lplogics"
