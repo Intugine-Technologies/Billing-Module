@@ -1,5 +1,12 @@
 # BillingModule
 
+## Environment variables
+
+|`Environ Variables`|`Values`|
+|---|---|
+|`DATABASE_SERVER`|`mongodb+srv://username:pass@example.mongodb.net:27017`|
+|`DATABASE_CLIENT`|`Main DB Client`|
+
 ## Setup
 
     git clone https://github.com/Intugine-Technologies/Billing-Module.git
